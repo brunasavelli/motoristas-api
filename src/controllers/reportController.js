@@ -13,17 +13,17 @@ const exportMotoristaPDF = async (req, res) => {
         doc.pipe(res);
 
         //Titulo
-        doc.fontSize(20).text("Lista de Motoristas", { align: "center" });
+        doc.fontSize(20).text("Relatório de Motoristas", {align: "center"});
         doc.moveDown();
 
         //Cabeçalho
         doc.fontSize(12).text("Id | Nome | Tipo de Habilitação", {underline: true});
-        doc.moveDown(2);
+        doc.moveDown(0.5);
 
-        //Conteúdo
-        motoristas.forEach((motoristas) => {
+        //Add dados dos bruxos
+        motoristas.forEach((motorista) => {
             doc.text(
-                `${motoristas.id} | ${motoristas.nome} | ${motoristas.tipo_habilitacao}`,
+                `${ motorista.id} | ${motorista.nome}  | ${motorista.tipo_habilitacao } `
             );
         });
 

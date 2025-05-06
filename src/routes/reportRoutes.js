@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const reportsController = require("../controllers/reportController");
+const reportController = require("./../controllers/reportController");
 
-router.get("/report/pdf", reportsController.exportMotoristaPDF);
+router.get("/report/pdf", reportController.exportMotoristaPDF);
 
 module.exports = router;
