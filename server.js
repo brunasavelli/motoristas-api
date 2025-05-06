@@ -4,10 +4,12 @@ const cors = require("cors");
 const motoristaRoutes = require("./src/routes/motoristaRoutes");
 const corridasRoutes = require("./src/routes/corridaRoutes");
 const path = require("path");
+const setupSwagger = require('./src/config/swagger');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+setupSwagger(app);
 
 app.use("/api/motoristas", motoristaRoutes);
 app.use("/api/corridas", corridasRoutes);

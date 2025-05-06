@@ -1,9 +1,20 @@
 # Custom Dictionary Words
+Atualiza
+atualizada
+atualizado
+Busca
 Cabeçalho
 Conteúdo
+Cria
+criada
+criado
+Deleta
 deletado
+descricao
+Documentação
 Fernanda
 gerar
+gerenciar
 habilitacao
 ILIKE
 Joana
@@ -11,6 +22,8 @@ João
 José
 Lista
 Marcio
+retornada
+suas
 tipo
 Titulo
 Usuários
