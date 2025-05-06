@@ -6,7 +6,9 @@ const getMotoristas = async (tipo_habilitacao) => {
         return result.rows;
     } else {
         const result = await pool.query(
-            `SELECT * FROM motoristas
+            `SELECT motoristas.*, corridas.cliente AS cliente
+            FROM motoristas
+            LEFT JOIN corridas ON motoristas.corrida_id = corridas.id
             WHERE motoristas.tipo_habilitacao ILIKE $1`, [`%${tipo_habilitacao}%`]
         );
         return result.rows;

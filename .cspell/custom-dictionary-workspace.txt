@@ -1,5 +1,11 @@
 # Custom Dictionary Words
+Cabeçalho
+Conteúdo
 deletado
+gerar
 habilitacao
 ILIKE
+Lista
 tipo
+Titulo
+Usuários
