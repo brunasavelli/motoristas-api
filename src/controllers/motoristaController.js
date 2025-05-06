@@ -2,7 +2,8 @@ const motoristaModel = require("../models/motoristaModel");
 
 const getAllMotoristas = async (req, res) => {
     try {
-        const motoristas = await motoristaModel.getMotoristas();
+        const { tipo_habilitacao } = req.query;
+        const motoristas = await motoristaModel.getMotoristas(tipo_habilitacao);
         res.json(motoristas);
     } catch (error) {
         res.status(500).json({ message: "Erro ao buscar motorista." });
