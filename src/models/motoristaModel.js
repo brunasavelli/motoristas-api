@@ -1,8 +1,16 @@
 const pool = require("../config/database");
 
-const getMotoristas = async () => {
-    const result = await pool.query("SELECT * FROM motoristas");
-    return result.rows;
+const getMotoristas = async (tipo_habilitacao) => {
+    if(!tipo_habilitacao) {
+        const result = await pool.query("SELECT * FROM motoristas");
+        return result.rows;
+    } else {
+        const result = await pool.query(
+            `SELECT * FROM motoristas
+            WHERE motoristas.tipo_habilitacao ILIKE $1`, [`%${tipo_habilitacao}%`]
+        );
+        return result.rows;
+    }
 };
 
 const getMotoristasById = async (id) => {
