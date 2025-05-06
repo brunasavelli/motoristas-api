@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const corridaController = require("../controllers/corridaController");
+const apiKeyMiddleware = require("../config/apiKey");
+
+router.use(apiKeyMiddleware);
 
 /**
  * @swagger

@@ -2,10 +2,12 @@
 Atualiza
 atualizada
 atualizado
+ausente
 bruxos
 Bruxos
 Busca
 Cabeçalho
+Chave
 Conteúdo
 Cria
 criada
@@ -19,6 +21,7 @@ gerar
 gerenciar
 habilitacao
 ILIKE
+inválida
 Joana
 João
 José

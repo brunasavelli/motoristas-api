@@ -2,6 +2,9 @@ const express = require("express");
 const router = express.Router();
 const motoristaController = require("../controllers/motoristaController");
 const upload = require("../config/upload.js");
+const apiKeyMiddleware = require("../config/apiKey");
+
+router.use(apiKeyMiddleware);
 
 /**
  * @swagger
