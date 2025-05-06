@@ -2,12 +2,12 @@ const PDFDocument = require("pdfkit");
 
 const motoristaModel = require("../models/motoristaModel");
 
-const exportUserPDF = async (req, res) => {
+const exportMotoristaPDF = async (req, res) => {
     try {
         const motoristas = await motoristaModel.getMotoristas();
 
         res.setHeader("Content-Type", "application/pdf");
-        res.setHeader("Content-Disposition", "inline; filename=users.pdf");
+        res.setHeader("Content-Disposition", "inline; filename=motoristas.pdf");
 
         const doc = new PDFDocument();
         doc.pipe(res);
@@ -33,4 +33,4 @@ const exportUserPDF = async (req, res) => {
     }
 }
 
-module.exports = { exportUserPDF };
+module.exports = { exportMotoristaPDF };

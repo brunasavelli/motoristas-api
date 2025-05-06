@@ -13,7 +13,7 @@ const getMotorista = async (req, res) => {
     try {
         const motorista = await motoristaModel.getMotoristasById(req.params.id);
         if (!motorista) {
-            return res.status(404).json({ message: "Motorista não encontrad0." });
+            return res.status(404).json({ message: "Motorista não encontrado." });
         }
         res.json(motorista);
     } catch (error) {
@@ -24,7 +24,8 @@ const getMotorista = async (req, res) => {
 const createMotorista = async (req, res) => {
     try{
         const { nome, tipo_habilitacao } = req.body;
-        const newMotorista = await motoristaModel.createMotorista(nome, tipo_habilitacao);
+        const photo = req.file ? req.file.filename : null;
+        const newMotorista = await motoristaModel.createMotorista(nome, tipo_habilitacao, photo);
         res.status(201).json(newMotorista);
     } catch (error) {
         console.log(error);

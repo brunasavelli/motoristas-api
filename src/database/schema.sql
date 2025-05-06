@@ -8,6 +8,8 @@ CREATE TABLE motoristas (
     tipo_habilitacao VARCHAR(100) NOT NULL
 );
 
+ALTER TABLE motoristas ADD COLUMN photo TEXT;
+
 CREATE TABLE corridas (
     id SERIAL PRIMARY KEY,
     cliente VARCHAR(100) NOT NULL,

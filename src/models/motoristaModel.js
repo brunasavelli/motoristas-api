@@ -20,10 +20,10 @@ const getMotoristasById = async (id) => {
     return result.rows[0];
 };
 
-const createMotorista = async (nome, tipo_habilitacao) => {
+const createMotorista = async (nome, tipo_habilitacao, photo) => {
     const result = await pool.query(
-        "INSERT INTO motoristas (nome, tipo_habilitacao) VALUES ($1, $2) RETURNING *",
-        [nome, tipo_habilitacao]
+        "INSERT INTO motoristas (nome, tipo_habilitacao, photo) VALUES ($1, $2, $3) RETURNING *",
+        [nome, tipo_habilitacao, photo]
     );
     return result.rows[0];
 };
