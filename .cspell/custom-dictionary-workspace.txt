@@ -3,10 +3,12 @@ Atualiza
 atualizada
 atualizado
 ausente
+Bruna
 bruxos
 Bruxos
 Busca
 Cabeçalho
+Caio
 Chave
 Conteúdo
 Cria
@@ -16,6 +18,8 @@ Deleta
 deletado
 descricao
 Documentação
+Enzo
+Fabiana
 Fernanda
 gerar
 gerenciar
@@ -26,10 +30,15 @@ Joana
 João
 José
 Lista
+Luana
+Luiz
+Maisa
 Marcio
 Relatório
 retornada
 suas
+Thiago
 tipo
 Titulo
 Usuários
+Vitor
