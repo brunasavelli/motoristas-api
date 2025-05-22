@@ -6,6 +6,7 @@ const corridasRoutes = require("./src/routes/corridaRoutes");
 const reportRoutes = require("./src/routes/reportRoutes");
 const path = require("path");
 const setupSwagger = require('./src/config/swagger');
+// const apiKeyMiddleware = require("./src/config/apiKey");
 
 const app = express();
 app.use(cors());
